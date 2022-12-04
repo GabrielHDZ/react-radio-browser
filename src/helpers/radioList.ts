@@ -8,8 +8,6 @@ So we have to fallback to ask a single server for a list.
 /**
  * Ask a specified server for a list of all other server.
  */
-
-
 function get_radiobrowser_base_urls() {
     return new Promise((resolve, reject) => {
         var request = new XMLHttpRequest()
