@@ -1,11 +1,10 @@
-import './App.css'
-import radioList from './components/radioList';
+import RadioList from './components/radioList';
 
 function App() {
 
     return (
         <div>
-            radioList
+            <RadioList />
         </div>
     )
 }

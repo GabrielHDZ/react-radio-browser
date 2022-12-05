@@ -1,5 +1,6 @@
 //import { RadioBrowser } from 'radio-browser';
-const RadioBrowser = require('radio-browser');
+const RadioBrowser = require('radio-browser')
+
 
 type useFilter = {
     limit: number,

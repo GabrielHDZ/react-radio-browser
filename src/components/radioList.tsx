@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { start } from '../helpers/radioList';
 
-function radioList() {
+function RadioList() {
 
-    let result = start();
-    console.log(result);
+    useEffect(() => {
+        const response = start();
+
+        return () => {
+            console.log(response);
+
+        }
+    }, [])
+
 
     return (
         <div>data</div>
     )
 }
 
-export default radioList
+export default RadioList
