@@ -4,18 +4,22 @@ import { start } from '../helpers/radioList';
 function RadioList() {
 
     useEffect(() => {
-        const response = start();
+        let results = start()
+        console.log(results);
+        const data = await Promise.all(
+            console.log(results);
+            
+            )
+        )
 
-        return () => {
-            console.log(response.then(e => console.log(e)));
-
-        }
-    }, [])
+    /* results.forEach(e => console.log(e.name)
+    ) */
+}, [])
 
 
-    return (
-        <div>data</div>
-    )
+return (
+    <div>data</div>
+)
 }
 
 export default RadioList

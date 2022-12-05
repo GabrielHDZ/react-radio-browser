@@ -1,4 +1,4 @@
-import { RadioBrowserApi } from "radio-browser-api"
+import { RadioBrowserApi, StationSearchType } from "radio-browser-api"
 const api = new RadioBrowserApi('my radio');
 
 type useFilter = {
@@ -17,13 +17,12 @@ let filter: useFilter = {
 
 export const start = async () => {
     try {
-        await api.searchStations({
-            language: 'english',
-            tag: 'jazz',
-            limit: 100
-        })
+        return await api.getStationsBy(StationSearchType.byTag, 'jazz');
     } catch (error) {
         console.log(error);
+    } finally {
+        console.log('Finally');
+
     }
 }
 
