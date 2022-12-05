@@ -7,7 +7,7 @@ function RadioList() {
         const response = start();
 
         return () => {
-            console.log(response);
+            console.log(response.then(e => console.log(e)));
 
         }
     }, [])
