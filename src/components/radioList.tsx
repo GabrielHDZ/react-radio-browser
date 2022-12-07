@@ -1,25 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { start } from '../helpers/radioList';
 
 function RadioList() {
+    let [radiol, setRadiol] = useState([]);
 
     useEffect(() => {
-        let results = start()
-        console.log(results);
-        const data = await Promise.all(
-            console.log(results);
-            
-            )
-        )
+        start().then(e => setRadiol(e))
 
-    /* results.forEach(e => console.log(e.name)
-    ) */
-}, [])
+        /* results.forEach(e => console.log(e.name)
+        ) */
+    }, [])
 
 
-return (
-    <div>data</div>
-)
+    return (
+        <div>data</div>
+    )
 }
 
 export default RadioList
