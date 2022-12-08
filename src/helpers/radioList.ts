@@ -18,6 +18,7 @@ let filter: useFilter = {
 export const start = async () => {
     try {
         let response = await api.getStationsBy(StationSearchType.byTag, 'jazz');
+        //el return response.json
         return Promise.resolve(response);
     } catch (error) {
         console.log(error);
