@@ -23,6 +23,14 @@ export const start = async () => {
         console.log(error);
     } finally {
         console.log('Finally');
+    }
+}
+export const busqueda1 = async () => {
+    try {
+
+    } catch (error) {
+
+    } finally {
 
     }
 }
