@@ -1,38 +1,14 @@
-import { RadioBrowserApi, StationSearchType } from "radio-browser-api"
-const api = new RadioBrowserApi('my radio');
+import { RadioBrowserApi, StationSearchType } from "radio-browser-api";
 
-type useFilter = {
-    limit: number,
-    by: string,
-    searchTerm: string,
+const api = new RadioBrowserApi("my radio");
 
+
+export const radio = async () => {
+    return await api.searchStations({
+        countryCode: 'US',
+        tag: 'jazz',
+        limit: 100
+    })
 }
 
-let filter: useFilter = {
-    limit: 5,
-    by: 'tag',
-    searchTerm: 'jazz'
-}
-
-
-export const start = async () => {
-    try {
-        let response = await api.getStationsBy(StationSearchType.byTag, 'jazz');
-        //el return response.json
-        return Promise.resolve(response);
-    } catch (error) {
-        console.log(error);
-    } finally {
-        console.log('Finally');
-    }
-}
-export const busqueda1 = async () => {
-    try {
-
-    } catch (error) {
-
-    } finally {
-
-    }
-}
 

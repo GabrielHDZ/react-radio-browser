@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { start } from '../helpers/radioList';
+import { radio } from '../helpers/radioList';
 
 function RadioList() {
     let [radiol, setRadiol] = useState([]);
 
     useEffect(() => {
-        /* start().then(e => {
-            e?.find(station => {
-                let response = Object.values(station)
-                setRadiol(response);
-            })
-        }) */
+        console.log(radio());
 
-        /* results.forEach(e => console.log(e.name)
-        ) */
     }, [])
 
 
