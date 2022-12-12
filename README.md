@@ -1,2 +1,2 @@
 # react-radio-browser
-use api.radio-browser service api  
+api.radio-browser service api  
